@@ -9,7 +9,7 @@
 
             Console.WriteLine("Guess a number between 1 and 100");
             string guessStr = Console.ReadLine();
-            int guess = int.Parse(guessStr);
+            int guess = Convert.ToInt32(guessStr);
             int guessCount = 0;
 
             if (guess < number)
@@ -23,9 +23,13 @@
             }
             else
             {
-                Console.WriteLine("You Won!");
-            }
+                Console.WriteLine($"You Won!, it took you {guessCount} guesses");
 
+            }
         }
+
+
+
+
     }
 }
