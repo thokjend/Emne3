@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FirstCsProgram")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e663d68b2d8db2ca2ff3b91eba7c6567c85cc1e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("FirstCsProgram")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FirstCsProgram")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
