@@ -1,0 +1,14 @@
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\bin\Debug\net8.0\FirstCsProgram.exe
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\bin\Debug\net8.0\FirstCsProgram.deps.json
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\bin\Debug\net8.0\FirstCsProgram.runtimeconfig.json
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\bin\Debug\net8.0\FirstCsProgram.dll
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\bin\Debug\net8.0\FirstCsProgram.pdb
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\FirstCsProgram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\FirstCsProgram.AssemblyInfoInputs.cache
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\FirstCsProgram.AssemblyInfo.cs
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\FirstCsProgram.csproj.CoreCompileInputs.cache
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\FirstCsProgram.dll
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\refint\FirstCsProgram.dll
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\FirstCsProgram.pdb
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\FirstCsProgram.genruntimeconfig.cache
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\FirstCsProgram\obj\Debug\net8.0\ref\FirstCsProgram.dll
