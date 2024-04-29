@@ -1,0 +1,15 @@
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\bin\Debug\net8.0\315A.exe
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\bin\Debug\net8.0\315A.deps.json
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\bin\Debug\net8.0\315A.runtimeconfig.json
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\bin\Debug\net8.0\315A.dll
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\bin\Debug\net8.0\315A.pdb
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.AssemblyInfoInputs.cache
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.AssemblyInfo.cs
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.csproj.CoreCompileInputs.cache
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.sourcelink.json
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.dll
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\refint\315A.dll
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.pdb
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\315A.genruntimeconfig.cache
+C:\Users\thokj\OneDrive\Desktop\Get Academy\Emne3\Fra JS til C#\Oppgaver\315A\obj\Debug\net8.0\ref\315A.dll
