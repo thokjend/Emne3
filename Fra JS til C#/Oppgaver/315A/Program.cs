@@ -24,11 +24,14 @@
                 {
                     Console.WriteLine($"Too high, you guessed {guess} with a total of {guessCount} guesses. Try again!");
                 }
-                else
-                {
-                    Console.WriteLine($"You Won!, it took you {guessCount} guesses");
-                }
 
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt32(guessStr);
+            }
+
+            if (number == guess)
+            {
+                Console.WriteLine($"You Won!, it took you {guessCount} guesses");
             }
 
         }
