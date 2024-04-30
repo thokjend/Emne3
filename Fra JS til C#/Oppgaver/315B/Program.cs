@@ -6,24 +6,22 @@
         {
             // Funksjon som skal telle antall bokstaver i en tekst
             int countLetter = 0;
-            Console.Write("Enter letter: ");
-            string letterStr = Console.ReadLine().ToLower();
-            char letter = letterStr.ToCharArray()[0];
+            string letter = "";
 
-            while (letterStr.Length != 1)
+            while (letter.Length != 1)
             {
-                Console.Write("Please enter a single letter: ");
-                letterStr = Console.ReadLine().ToLower();
-                letter = letterStr.ToCharArray()[0];
-            }
-            Console.Write("Enter text: ");
+                Console.Write("Enter letter: ");
+                letter = Console.ReadLine().ToLower();
 
+            }
+
+            Console.Write("Enter text: ");
             string text = Console.ReadLine().ToLower();
 
 
             foreach (char c in text)
             {
-                if (c == letter)
+                if (c == letter[0])
                 {
                     countLetter++;
                 }
