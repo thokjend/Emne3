@@ -14,6 +14,7 @@
 
             while (number != guess)
             {
+                guessCount++;
                 if (guess < number)
                 {
                     Console.WriteLine($"Too low, you guessed {guess} with a total of {guessCount} guesses. Try again!");
