@@ -12,20 +12,24 @@
             int guess = Convert.ToInt32(guessStr);
             int guessCount = 0;
 
-            if (guess < number)
+            while (number != guess)
             {
-                Console.WriteLine($"Too low, you guessed {guess} with a total of {guessCount} guesses. Try again!");
+                if (guess < number)
+                {
+                    Console.WriteLine($"Too low, you guessed {guess} with a total of {guessCount} guesses. Try again!");
+                }
+
+                else if (guess > number)
+                {
+                    Console.WriteLine($"Too high, you guessed {guess} with a total of {guessCount} guesses. Try again!");
+                }
+                else
+                {
+                    Console.WriteLine($"You Won!, it took you {guessCount} guesses");
+                }
+
             }
 
-            else if (guess > number)
-            {
-                Console.WriteLine($"Too high, you guessed {guess} with a total of {guessCount} guesses. Try again!");
-            }
-            else
-            {
-                Console.WriteLine($"You Won!, it took you {guessCount} guesses");
-
-            }
         }
     }
 }
