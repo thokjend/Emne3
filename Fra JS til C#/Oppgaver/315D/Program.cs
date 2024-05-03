@@ -10,18 +10,10 @@
             string longestWord = textArray[0];
             string mostVowelsWord = "";
             int maxVowelCount = 0;
-            string Vowels = "aeiouyæøåAEIOUYÆØÅ";
-
+            
             foreach (string word in textArray)
             {
-                int vowelCount = 0;
-                foreach (char c in word)
-                {
-                    if (Vowels.Contains(c))
-                    {
-                        vowelCount++;
-                    }
-                }
+                int vowelCount = countVowels(word);
 
                 if (vowelCount > maxVowelCount)
                 {
@@ -41,6 +33,20 @@
             {
                 Console.WriteLine($"The word with the most vowels is: {mostVowelsWord} with {maxVowelCount} vowels");
             }
+        }
+
+        static int countVowels(string word)
+        {
+            string Vowels = "aeiouyæøåAEIOUYÆØÅ";
+            int vowelCount = 0;
+            foreach (char c in word)
+            {
+                if (Vowels.Contains(c))
+                {
+                    vowelCount++;
+                }
+            }
+            return vowelCount;
         }
     }
 }
