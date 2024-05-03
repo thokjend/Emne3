@@ -37,16 +37,16 @@
 
         static int countVowels(string word)
         {
-            string Vowels = "aeiouyæøåAEIOUYÆØÅ";
-            int vowelCount = 0;
+            string vowels = "aeiouyæøåAEIOUYÆØÅ";
+            int count = 0;
             foreach (char c in word)
             {
-                if (Vowels.Contains(c))
+                if (vowels.Contains(c))
                 {
-                    vowelCount++;
+                    count++;
                 }
             }
-            return vowelCount;
+            return count;
         }
     }
 }
