@@ -29,7 +29,6 @@
                     mostVowelsWord = word;
                 }
 
-
                 if (word.Length > longestWord.Length)
                 {
                     longestWord = word;
@@ -42,8 +41,6 @@
             {
                 Console.WriteLine($"The word with the most vowels is: {mostVowelsWord} with {maxVowelCount} vowels");
             }
-
-
         }
     }
 }
