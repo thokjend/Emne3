@@ -1,8 +1,4 @@
-﻿using System;
-using System.Diagnostics.Metrics;
-using System.Reflection;
-
-class Program
+﻿class Program
 {
     static void Main(string[] arguments)
     {
