@@ -1,4 +1,8 @@
-﻿class Program
+﻿using System;
+using System.Diagnostics.Metrics;
+using System.Reflection;
+
+class Program
 {
     static void Main(string[] arguments)
     {
@@ -9,19 +13,29 @@
         while (!string.IsNullOrWhiteSpace(text))
         {
             text = Console.ReadLine();
-            foreach (var character in text)
+            addToArray(text, counts, ref counter);
+            countLetters(counts, ref counter, ref range);
+        }
+    }
+
+    static void addToArray(string text, int[] counts, ref int counter)
+    {
+        foreach (var character in text)
+        {
+            counts[(int)character]++;
+            counter++;
+        }
+    }
+
+    static void countLetters(int[] counts, ref int counter, ref int range)
+    {
+        for (var i = 0; i < range; i++)
+        {
+            if (counts[i] > 0)
             {
-                counts[(int)character]++;
-                counter++;
-            }
-            for (var i = 0; i < range; i++)
-            {
-                if (counts[i] > 0)
-                {
-                    var character = (char)i;
-                    float percentage = (float)counts[i] / counter * 100;
-                    Console.WriteLine($"{character} -  {counts[i]} - {percentage:F2}%");
-                }
+                var character = (char)i;
+                float percentage = (float)counts[i] / counter * 100;
+                Console.WriteLine($"{character} -  {counts[i]} - {percentage:F2}%");
             }
         }
     }
