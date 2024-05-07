@@ -10,11 +10,65 @@
                 return;
             }
 
-            string pattern = args[1];
-            Console.WriteLine(pattern);
+            int length = Convert.ToInt32(args[0]);
+            string options = args[1];
 
+            var pattern = options.PadRight(length, 'l');
+            string password = "";
+
+
+            while (pattern.Length > 0)
+            {
+
+                char lastIndex = pattern[pattern.Length - 1];
+
+                if (lastIndex == 'l')
+                {
+                    password += WriteRandomLowerCaseLetter();
+                }
+                else if (lastIndex == 'L')
+                {
+                    password += WriteRandomUpperCaseLetter();
+                }
+                else if (lastIndex == 's')
+                {
+                    password += WriteRandomSpecialCharacter();
+                }
+                else if (lastIndex == 'd')
+                {
+                    password += WriteRandomDigit();
+                }
+
+                pattern = pattern.Remove(pattern.Length - 1);
+            }
+
+            Console.WriteLine(password);
 
         }
+
+        static char WriteRandomLowerCaseLetter()
+        {
+            return 'a';
+        }
+
+        static char WriteRandomUpperCaseLetter()
+        {
+            return 'A';
+        }
+
+        static int WriteRandomDigit()
+        {
+            return 4;
+        }
+
+        static char WriteRandomSpecialCharacter()
+        {
+            return '!';
+        }
+
+
+
+
 
         static bool IsValid(string[] args)
         {
@@ -28,14 +82,6 @@
                 string s = args[0];
                 string t = args[1];
                 string validChars = "lLds";
-
-                /*
-                int argToInt = int.Parse(s);
-                if (t.Length > argToInt)
-                {
-                    return false;
-                }
-                */
 
                 foreach (var c in s)
                 {
