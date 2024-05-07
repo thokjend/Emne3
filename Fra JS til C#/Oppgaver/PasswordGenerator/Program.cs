@@ -1,7 +1,10 @@
-﻿namespace PasswordGenerator
+﻿using System.Xml.Schema;
+
+namespace PasswordGenerator
 {
     internal class Program
     {
+        static readonly Random Random = new Random();
         static void Main(string[] args)
         {
             if (!IsValid(args))
@@ -19,22 +22,22 @@
 
             while (pattern.Length > 0)
             {
+                int randomIndex = Random.Next(0, pattern.Length);
+                char randomChar = pattern[randomIndex];
 
-                char lastIndex = pattern[pattern.Length - 1];
-
-                if (lastIndex == 'l')
+                if (randomChar == 'l')
                 {
                     password += WriteRandomLowerCaseLetter();
                 }
-                else if (lastIndex == 'L')
+                else if (randomChar == 'L')
                 {
                     password += WriteRandomUpperCaseLetter();
                 }
-                else if (lastIndex == 's')
+                else if (randomChar == 's')
                 {
                     password += WriteRandomSpecialCharacter();
                 }
-                else if (lastIndex == 'd')
+                else if (randomChar == 'd')
                 {
                     password += WriteRandomDigit();
                 }
@@ -48,24 +51,30 @@
 
         static char WriteRandomLowerCaseLetter()
         {
-            return 'a';
+            return GetRandomLetter('a','z');
         }
 
         static char WriteRandomUpperCaseLetter()
         {
-            return 'A';
+            return GetRandomLetter('A', 'Z');
         }
 
         static int WriteRandomDigit()
         {
-            return 4;
+            return Random.Next(0, 9);
         }
 
         static char WriteRandomSpecialCharacter()
         {
-            return '!';
+            string specialCharacters = "!#¤%&/()=?`@£$€{[]}´|";
+            var randomIndex = Random.Next(0, specialCharacters.Length - 1);
+            return specialCharacters[randomIndex];
         }
 
+        static char GetRandomLetter(char min, char max)
+        {
+            return (char)Random.Next(min, max);
+        }
 
 
 
@@ -110,7 +119,7 @@
                               "\nOptions:\r" +
                               "\n- l = liten bokstav\r" +
                               "\n- L = stor bokstav\r\n- d = siffer\r" +
-                              "\n- s = spesialtegn (!\"#\u00a4%&/(){}[]\r" +
+                              "\n- s = spesialtegn !#¤%&/()=?`@£$€{[]}´|\r" +
                               "\nEksempel: PasswordGenerator 14 lLssdd\r" +
                               "\n    betyr\r\n        Min. 1 liten bokstav\r" +
                               "\n        Min. 1 1 stor bokstav\r" +
