@@ -76,9 +76,6 @@ namespace PasswordGenerator
             return (char)Random.Next(min, max);
         }
 
-
-
-
         static bool IsValid(string[] args)
         {
             if (args.Length != 2)
@@ -127,5 +124,4 @@ namespace PasswordGenerator
                               "\n        Lengde på passordet skal være 14");
         }
     }
-
 }
