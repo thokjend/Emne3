@@ -22,7 +22,7 @@ namespace PasswordGenerator
 
             while (pattern.Length > 0)
             {
-                int randomIndex = Random.Next(0, pattern.Length);
+                int randomIndex = Random.Next(0, pattern.Length - 1);
                 char randomChar = pattern[randomIndex];
 
                 if (randomChar == 'l')
