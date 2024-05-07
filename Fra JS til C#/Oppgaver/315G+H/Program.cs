@@ -1,36 +1,41 @@
 ﻿class Program
 {
+    static int[] counts = new int[250];
     static void Main(string[] arguments)
     {
-        var range = 250;
-        var counts = new int[range];
         string text = "something";
-        int counter = 0;
         while (!string.IsNullOrWhiteSpace(text))
         {
             text = Console.ReadLine();
-            addToArray(text, counts, ref counter);
-            countLetters(counts, ref counter, ref range);
+            addToArray(text);
+            countLetters();
         }
     }
 
-    static void addToArray(string text, int[] counts, ref int counter)
+    static void addToArray(string text)
     {
         foreach (var character in text)
         {
             counts[(int)character]++;
-            counter++;
         }
     }
 
-    static void countLetters(int[] counts, ref int counter, ref int range)
+    static void countLetters()
     {
-        for (var i = 0; i < range; i++)
+        var sum = 0;
+        foreach (var n in counts)        
+        {
+            sum += n;
+        }
+
+
+
+        for (var i = 0; i < counts.Length; i++)
         {
             if (counts[i] > 0)
             {
                 var character = (char)i;
-                float percentage = (float)counts[i] / counter * 100;
+                float percentage = (float)counts[i] / sum * 100;
                 Console.WriteLine($"{character} -  {counts[i]} - {percentage:F2}%");
             }
         }
