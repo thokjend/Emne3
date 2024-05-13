@@ -4,7 +4,12 @@ namespace _321A
 {
     internal class CharCounter
     {
-        public int[] counts = new int[250];
+        public int[] counts;
+
+        public CharCounter()
+        {
+            counts = new int[250];
+        }
 
         public void AddText(string text)
         {
