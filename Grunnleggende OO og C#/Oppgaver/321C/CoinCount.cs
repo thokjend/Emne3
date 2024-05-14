@@ -2,14 +2,20 @@
 {
     internal class CoinCount
     {
-        public int Value;
-        public int Count;
+        private int Value;
+        private int Count;
 
 
-        public CoinCount(int value, int count)
+        public CoinCount(int value , int count)
         {
             Value = value;
             Count = count;
         }
+
+        public int GetSum()
+        {
+            return Value * Count;
+        }
+
     }
 }

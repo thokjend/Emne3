@@ -9,7 +9,7 @@
                 int sum = 0;
                 for (int i = 0; i < coinCounts.Length; i++)
                 {
-                    sum += coinCounts[i].Value * coinCounts[i].Count;
+                    sum += coinCounts[i].GetSum();
                 }
 
                 return sum;
