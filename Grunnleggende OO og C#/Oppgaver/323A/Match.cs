@@ -2,43 +2,43 @@
 {
     internal class Match
     {
-        private int homeGoals = 0;
-        private int awayGoals = 0;
-        private string Bet;
-        public bool matchIsRunning = true;
+        private int _homeGoals = 0;
+        private int _awayGoals = 0;
+        private string _bet;
+        public bool MatchIsRunning = true;
 
 
         public Match(string bet)
         {
-            Bet = bet;
+            _bet = bet;
         }
 
         public void AddGoal(string team)
         {
             if (team == "H")
             {
-                homeGoals++;
+                _homeGoals++;
             }
             else
             {
-                awayGoals++;
+                _awayGoals++;
             }
         }
 
         public bool CorrectBet()
         {
-            var result = homeGoals == awayGoals ? "U" : homeGoals > awayGoals ? "H" : "B";
-            return Bet.Contains(result);
+            var result = _homeGoals == _awayGoals ? "U" : _homeGoals > _awayGoals ? "H" : "B";
+            return _bet.Contains(result);
         }
 
         public void EndMatch()
         {
-            matchIsRunning = false;
+            MatchIsRunning = false;
         }
 
         public string GetScore()
         {
-            return homeGoals + "-" + awayGoals;
+            return _homeGoals + "-" + _awayGoals;
         }
 
 

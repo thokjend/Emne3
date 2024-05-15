@@ -8,7 +8,7 @@
             var bet = Console.ReadLine();
             var newMatch = new Match(bet);
 
-            while (newMatch.matchIsRunning)
+            while (newMatch.MatchIsRunning)
             {
                 Console.Write("Kommandoer: \n" + " - H = scoring hjemmelag\n" + " - B = scoring bortelag\n" + " - X = kampen er ferdig\n" + "Angi kommando: ");
                 var command = Console.ReadLine();
