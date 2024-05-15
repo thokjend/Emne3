@@ -9,15 +9,11 @@
                           " - halvgardering: HU, HB, UB\n" +
                           " - helgardering: HUB\n" +
                           "Hva har du tippet for denne kampen? ");
+
             var bet = Console.ReadLine();
+            var newMatch = new Match(bet);
 
-            var newMatch = new Match();
-
-            var homeGoals = 0;
-            var awayGoals = 0;
-            var matchIsRunning = true;
-
-            while (matchIsRunning)
+            while (newMatch.matchIsRunning)
             {
                 Console.Write("Kommandoer: \n" +
                               " - H = scoring hjemmelag\n" +
@@ -25,15 +21,13 @@
                               " - X = kampen er ferdig\n" +
                               "Angi kommando: ");
                 var command = Console.ReadLine();
-                matchIsRunning = command != "X";
-                if (command == "H") homeGoals++;
-                else if (command == "B") awayGoals++;
-                Console.WriteLine($"Stillingen er {homeGoals}-{awayGoals}.");
+                if(command == "X") { newMatch.EndMatch();}
+                else if(command == "H"){newMatch.AddGoal("H");}
+                else if(command == "B") { newMatch.AddGoal("B"); }
+                Console.WriteLine($"Stillingen er {newMatch.GetScore()}.");
             }
 
-            var result = homeGoals == awayGoals ? "U" : homeGoals > awayGoals ? "H" : "B";
-            var isBetCorrect = bet.Contains(result);
-            var isBetCorrectText = isBetCorrect ? "riktig" : "feil";
+            var isBetCorrectText = newMatch.CorrectBet() ? "riktig" : "feil";
             Console.WriteLine($"Du tippet {isBetCorrectText}");
         }
     }
