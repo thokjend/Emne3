@@ -2,9 +2,9 @@
 {
     internal class Match
     {
-        public int homeGoals = 0;
-        public int awayGoals = 0;
-        public string Bet;
+        private int homeGoals = 0;
+        private int awayGoals = 0;
+        private string Bet;
         public bool matchIsRunning = true;
 
 
