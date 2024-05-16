@@ -2,7 +2,7 @@
 {
     internal class GameConsole
     {
-        public void Show()
+        public void Show(Board board)
         {
             Console.WriteLine("  a b c");
             Console.WriteLine(" ┌─────┐");
