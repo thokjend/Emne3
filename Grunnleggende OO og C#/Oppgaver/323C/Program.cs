@@ -4,9 +4,10 @@
     {
         static void Main(string[] args)
         {
-            var board = new GameConsole();
+            var board = new Board();
+            var gameConsole = new GameConsole();
 
-            board.Show();
+            gameConsole.Show(board);
         }
     }
 }

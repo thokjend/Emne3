@@ -12,5 +12,9 @@
             }
         }
 
+        public void GetChar(int index)
+        {
+
+        }
     }
 }
