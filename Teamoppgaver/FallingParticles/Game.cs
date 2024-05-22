@@ -7,10 +7,9 @@
         private int _gameRoundsBetweenSpawn;
         private int _roundCount;
         private int _levelCount;
-        private List<Particle> _particles;
 
+        private readonly List<Particle> _particles;
         private readonly Paddle _paddle;
-
         private readonly Random _random = new Random();
 
         public Game(Paddle paddle)
