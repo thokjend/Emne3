@@ -46,7 +46,7 @@
             _levelCount++;
         }
 
-        public void RoundsBetweenSpawn()
+        private void RoundsBetweenSpawn()
         {
             _gameRoundsBetweenSpawn = 50 / _level;
         }
@@ -98,7 +98,7 @@
             return false;
         }
 
-        public void SpawnParticle()
+        private void SpawnParticle()
         {
             var newParticle = new Particle
             {

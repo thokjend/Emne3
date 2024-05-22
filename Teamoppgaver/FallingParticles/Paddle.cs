@@ -1,10 +1,12 @@
-﻿namespace FallingParticles
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace FallingParticles
 {
     internal class Paddle
     {
-        public int Position;
-        public int MoveDistance = 6;
-        public string Shape = "========";
+        public int Position { get; private set; }
+        public int MoveDistance { get; private set; } = 6;
+        public string Shape { get; private set; } = "========";
 
         public Paddle()
         {
