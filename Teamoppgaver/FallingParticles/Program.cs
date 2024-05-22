@@ -13,6 +13,8 @@ class Program
 
     static void Main()
     {
+        var paddle = new Paddle();
+
         Console.CursorVisible = false;
         Console.WindowWidth = 80;
 
@@ -21,13 +23,11 @@ class Program
             InitializeGame();
             var levelCount = 0;
             var roundCount = 45;
-            while (true)
+            while (!CheckLostParticle())
             {
                 DrawGame();
-                MovePaddle();
+                paddle.Move();
                 MoveParticles();
-                var hasLostParticle = CheckLostParticle();
-                if (hasLostParticle) break;
                 if (roundCount >= gameRoundsBetweenSpawn)
                 {
                     SpawnParticles();
@@ -82,21 +82,6 @@ class Program
             var particleY = (int)Math.Floor(particle.Y);
             Console.SetCursorPosition(particleX, particleY);
             Console.Write("O");
-        }
-    }
-
-    static void MovePaddle()
-    {
-        if (Console.KeyAvailable)
-        {
-            var key = Console.ReadKey(true);
-            var moveLeft = key.Key == ConsoleKey.LeftArrow && paddlePosition >= paddleMoveDistance;
-            var moveRight = key.Key == ConsoleKey.RightArrow && paddlePosition < Console.WindowWidth - paddle.Length;
-            if (moveLeft || moveRight)
-            {
-                var direction = moveLeft ? -1 : 1;
-                paddlePosition += direction * 3 * paddle.Length / 4;
-            }
         }
     }
 
