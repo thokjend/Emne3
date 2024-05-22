@@ -1,70 +1,67 @@
-﻿using System;
-using System.Reflection.Metadata;
-
-namespace FallingParticles
+﻿namespace FallingParticles
 {
     internal class Game
     {
-        public int level;
-        public int score;
-        public int gameRoundsBetweenSpawn;
-        public int roundCount;
-        public int levelCount;
-        public List<Particle> particles;
+        private int _level;
+        private int _score;
+        private int _gameRoundsBetweenSpawn;
+        private int _roundCount;
+        private int _levelCount;
+        private List<Particle> _particles;
 
         private readonly Paddle _paddle;
 
-        readonly Random random = new Random();
+        readonly Random _random = new Random();
 
         public Game(Paddle paddle)
         {
             _paddle = paddle;
-            level = 1;
-            score = 0;
-            roundCount = 45;
-            levelCount = 0;
-            particles = new List<Particle>();
-            gameRoundsBetweenSpawn = 50 / level;
+            _level = 1;
+            _score = 0;
+            _roundCount = 45;
+            _levelCount = 0;
+            _particles = new List<Particle>();
+            _gameRoundsBetweenSpawn = 50 / _level;
         }
 
         public void IncreaseLevel()
         {
-            if (levelCount == 100)
+            if (_levelCount == 100)
             {
-                levelCount = 0;
-                level++;
+                _levelCount = 0;
+                _level++;
             }
         }
 
         public void RoundCount()
         {
-            if (roundCount >= gameRoundsBetweenSpawn)
+            if (_roundCount >= _gameRoundsBetweenSpawn)
             {
                 SpawnParticle();
                 RoundsBetweenSpawn();
-                roundCount = 0;
+                _roundCount = 0;
             }
 
-            roundCount++;
-            levelCount++;
+            _roundCount++;
+            _levelCount++;
         }
 
         public void RoundsBetweenSpawn()
         {
-            gameRoundsBetweenSpawn = 50 / level;
+            _gameRoundsBetweenSpawn = 50 / _level;
         }
 
         public void Draw()
         {
             Console.Clear();
             Console.SetCursorPosition(60, 0);
-            Console.Write($"Score: {score}");
+            Console.Write($"Score: {_score}");
             Console.SetCursorPosition(71, 0);
-            Console.Write($"Level: {level}");
+            Console.Write($"Level: {_level}");
             Console.SetCursorPosition(_paddle.Position, Console.WindowHeight - 1);
             Console.Write(_paddle.Shape);
 
-            foreach (var particle in particles)
+            foreach (var particle in _particles)
             {
                 var particleX = (int)Math.Floor(particle.X);
                 var particleY = (int)Math.Floor(particle.Y);
@@ -75,21 +72,21 @@ namespace FallingParticles
 
         public void MoveParticles()
         {
-            for (var index = particles.Count - 1; index >= 0; index--)
+            for (var index = _particles.Count - 1; index >= 0; index--)
             {
-                var particle = particles[index];
+                var particle = _particles[index];
                 particle.Y += 0.5f;
                 if (particle.Y > Console.WindowHeight - 1)
                 {
-                    score++;
-                    particles.Remove(particle);
+                    _score++;
+                    _particles.Remove(particle);
                 }
             }
         }
 
         public bool CheckLostParticle()
         {
-            foreach (var particle in particles)
+            foreach (var particle in _particles)
             {
                 if ((particle.X < _paddle.Position || particle.X > _paddle.Position + _paddle.Shape.Length)
                     && particle.Y == Console.WindowHeight - 1)
@@ -105,10 +102,10 @@ namespace FallingParticles
         {
             var newParticle = new Particle
             {
-                X = random.Next(0, Console.WindowWidth),
+                X = _random.Next(0, Console.WindowWidth),
                 Y = 0
             };
-            particles.Add(newParticle);
+            _particles.Add(newParticle);
         }
 
 

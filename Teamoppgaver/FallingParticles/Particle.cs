@@ -1,8 +1,4 @@
-﻿using System;
-using System.Reflection.Metadata;
-using static System.Formats.Asn1.AsnWriter;
-
-namespace FallingParticles
+﻿namespace FallingParticles
 {
     internal class Particle
     {
