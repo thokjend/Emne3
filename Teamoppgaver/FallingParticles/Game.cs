@@ -11,7 +11,7 @@
 
         private readonly Paddle _paddle;
 
-        readonly Random _random = new Random();
+        private readonly Random _random = new Random();
 
         public Game(Paddle paddle)
         {
