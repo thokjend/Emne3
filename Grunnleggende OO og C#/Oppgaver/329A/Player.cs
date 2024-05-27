@@ -25,7 +25,5 @@ namespace _329A
         {
             Console.WriteLine($"{_name}: {_points} points");
         }
-
-
     }
 }
