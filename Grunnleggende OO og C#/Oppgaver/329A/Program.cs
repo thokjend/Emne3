@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-namespace _329A
+﻿namespace _329A
 {
     internal class Program
     {

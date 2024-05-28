@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace _329A
+﻿namespace _329A
 {
     internal class Player
     {
