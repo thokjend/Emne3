@@ -19,7 +19,7 @@
             {
                 return TriangleArea();
             }
-            else if (_name == "square")
+            if (_name == "square")
             {
                 return SquareArea();
             }
