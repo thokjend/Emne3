@@ -8,24 +8,24 @@
             var js = school.AddSubject("JavaScript", "Terje", 401);
             var math = school.AddSubject("Math", "Arne", 402);
 
+            var classA = school.AddClass();
+            classA.AddTeacher();
+            classA.AddStudent();
+
 
             var student1 = new Student("Per");
             var student2 = new Student("Pål");
             var student3 = new Student("Espen");
             var student4 = new Student("Thomas");
 
-            js.EnrollStudent(student1);
-            js.EnrollStudent(student2);
-            js.EnrollStudent(student3);
-            js.EnrollStudent(student4);
+            school.EnrollStudentInSubject(student1, js);
 
             js.GetInfo();
-            js.ShowAllStudents();
+            js.ShowStudents();
 
 
             //math.EnrollStudent(student1);
-            //math.ShowAllStudents();
-
+            //math.ShowStudents();
 
         }
     }
