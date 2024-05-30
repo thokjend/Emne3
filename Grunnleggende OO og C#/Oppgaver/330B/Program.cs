@@ -19,7 +19,8 @@
             js.EnrollStudent(student3);
             js.EnrollStudent(student4);
 
-            math.GetInfo();
+            js.GetInfo();
+            js.ShowAllStudents();
 
 
             //math.EnrollStudent(student1);
