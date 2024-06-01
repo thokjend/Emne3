@@ -28,6 +28,7 @@ namespace _330B
             var enrollment = new Enrollment(student, subject);
             _enrollments.Add(enrollment);
             subject.AddEnrollment(enrollment);
+            student.AddEnrollment(enrollment);
         }
 
 
