@@ -12,7 +12,8 @@
                               + " - K = kjøp oppgradering \r\n       øker poeng per klikk \r\n       "
                               + "koster 10 poeng\r\n - S = kjøp superoppgradering \r\n       "
                               + "øker \"poeng per klikk\" for den vanlige oppgraderingen.\r\n       "
-                              + "koster 100 poeng\r\n - X = avslutt applikasjonen");
+                              + "koster 100 poeng\r\n - X = avslutt applikasjonen\r\n"
+                              + " - J = Juks \r\n       øker poeng med 1000");
         }
         public void DisplayPoints()
         {
@@ -24,6 +25,10 @@
             Console.WriteLine("Trykk tast for ønsket kommando.");
         }
 
+        public void Cheat()
+        {
+            _points += 1000;
+        }
         public void Click()
         {
             _points += _pointsPerClick;

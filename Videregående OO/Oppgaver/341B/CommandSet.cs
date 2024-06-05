@@ -11,7 +11,8 @@
                 new ExitCommand(),
                 new ClickCommand(game),
                 new BuyUpgradeCommand(game),
-                new BuySuperUpgradeCommand(game)
+                new BuySuperUpgradeCommand(game),
+                new CheatCommand(game)
             };
         }
 
