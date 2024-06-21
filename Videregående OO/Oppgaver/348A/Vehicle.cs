@@ -13,6 +13,8 @@
 
         public virtual void Show()
         {
+            Console.WriteLine($"Reg.nr: {_characteristics}");
+            Console.WriteLine($"Effekt: {_effect}kw");
         }
 
         public virtual void Move()

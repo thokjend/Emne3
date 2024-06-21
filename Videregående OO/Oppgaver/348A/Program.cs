@@ -9,7 +9,7 @@
             var airplane = new Airplane("LN1234", 1000, 30, 2, 10, "jetfly");
             var boat = new Boat("ABC123", 100, 30, 500);
 
-            car1.CheckIfSameVehicle(car2);
+            boat.Show();
 
         }
     }
