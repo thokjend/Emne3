@@ -5,7 +5,6 @@
         protected readonly int _effect;
         protected internal readonly string _characteristics;
 
-
         public Vehicle(int effect, string characteristics)
         {
             _effect = effect;
